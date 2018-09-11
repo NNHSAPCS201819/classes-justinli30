@@ -23,6 +23,33 @@ public class Car
     private double fuelIntake; // in units of gallons
     
     /*
+     * Constructor:
+     *      - responsible for initializing newly created objects
+     *      - invoked automatically via the new operator
+     *      - name of the constructor must match the name of the class
+     *      - has no return type (not even void)
+     *      - multiple constructors may be defined for a class
+     */
+    
+    /**
+     * Default constructor for the Car class.
+     *      Initializes the fuel efficiency to 30mpg and the fuel in this
+     *          car's tank to 0 gallons. 
+     */
+    public Car()
+    {
+    }
+    
+    /**
+     * Constructs a new Car object with the specified fuel efficiency
+     * 
+     * @param   initialEfficiency   the initial fuel efficiency, in 
+     *                              miles per gallon, of this new car
+     */
+    public Car(double initialEfficiency)
+    {
+    }
+    /*
      * When defining a method, specify:
      *      the visibility (e.g., public)
      *      the return type(e.g., void)
