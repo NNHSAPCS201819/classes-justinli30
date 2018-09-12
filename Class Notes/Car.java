@@ -20,7 +20,8 @@ public class Car
      *      automatically initiailize to a default value (0, false, null)
      */
     private double fuelEfficiency; // in units of miles per gallon
-    private double fuelIntake; // in units of gallons
+    private double fuelInTank; // in units of gallons
+    private String vin; // vehicle identification number
     
     /*
      * Constructor:
@@ -38,6 +39,14 @@ public class Car
      */
     public Car()
     {
+        /*
+         * The "this" reserved word references the current object
+         *      (like "self" in python)
+         * Its usage is encouraged but usually not required.
+         */
+        this.fuelEfficiency = 30;
+        this.fuelInTank = 0;
+        this.vin = "";
     }
     
     /**
@@ -48,6 +57,19 @@ public class Car
      */
     public Car(double initialEfficiency)
     {
+        /*
+         * If the parameter was named fuelEfficiency, it would 
+         *      "shadow" the instance variable fuelEfficiency.
+         * Local and parameter variables "shadow" instance variables 
+         *      of the same name. In this code, fuelEfficiency would refer to 
+         *      the parameter and not to the instance variable.
+         * To refer explicitly to an isntance variable, use "this"
+         * Advice: avoid this issue by giving parameters and local variables
+         *      UNIQUE names!
+         */
+        this.fuelEfficiency = initialEfficiency;
+        this.fuelInTank = 0;
+        this.vin = "";
     }
     /*
      * When defining a method, specify:
@@ -64,7 +86,8 @@ public class Car
      */
     public void drive(double distance)
     {
-        
+        double fuelConsumed = this.fuelEfficiency / distance;
+        this.fuelInTank -= fuelConsumed;
     }
     /**
      * Adds the specified amount of fuel to this car's tank.
@@ -74,6 +97,7 @@ public class Car
      */
     public void addFuel(double amount)
     {
+        this.fuelInTank += amount;
     }
     /**
      * Returns the amount of fuel in this car's tank.
@@ -82,7 +106,23 @@ public class Car
      */
     public double getFuelInTank()
     {
-        return 0;
+        return this.fuelInTank;
     }
-    
+    /**
+     * Returns the VIN of this car
+     * 
+     * @return the VIN of this car
+     */
+    public String getVIN()
+    {
+        return "";
+    }
+    /**
+     * Sets the VIN of this car
+     * 
+     * @param   newVIN  the VIN of this car
+     */
+    public void setVIN(String newVIN)
+    {
+    }
 }
