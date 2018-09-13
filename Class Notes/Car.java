@@ -69,7 +69,7 @@ public class Car
          */
         this.fuelEfficiency = initialEfficiency;
         this.fuelInTank = 0;
-        this.vin = "";
+        this.vin = null;
     }
     /*
      * When defining a method, specify:
