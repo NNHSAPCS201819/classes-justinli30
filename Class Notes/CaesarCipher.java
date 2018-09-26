@@ -99,6 +99,50 @@ public class CaesarCipher
         final int DAYS_FOR_EVERY_YEAR = 365;
         
         // SECONDS_FOR_EVERY_MINUTE = 30; cannot change value of a final value
+        
+        /*
+         * Use integer division to calculate how many whole minutes based on 
+         *      the specified number of seconds.
+         *      
+         * Integer division (like // operator in Python) discards the remainders
+         *      (truncates).
+         * 
+         * Java does integer division when both operands are integers;
+         *      floating point division when one or both operators are 
+         *      floating point numbers.
+         *      
+         * For example:
+         *      3 / 4 = 0 (3 and 4 are int literals)  *THIS IS ON AP TEST*
+         *      3.0 / 4 = 0.75 (3.0 is a double literal)
+         */
+        long totalMinutes = totalSeconds / SECONDS_FOR_EVERY_MINUTE;
+        
+        /*
+         * Use the modulo (mod, remainder) operator to calculate how many
+         *      seconds remain.
+         *  
+         * The mod operator (%) returns the remainder of the division operation.
+         * 
+         * It can be very useful when paired with integer division.
+         * 
+         * For example:
+         *      7 % 2 = 1
+         *      11 % 3 = 2
+         *      6 % 2 = 0
+         *      4 % 11 = 3
+         *      
+         * %2 is often used to test odd/even (odd -> 1, even -> 0)
+         */
+        long seconds = totalSeconds % SECONDS_FOR_EVERY_MINUTE;
+        
+        long totalHours = totalMinutes / MINUTES_FOR_EVERY_HOUR;
+        long minutes = totalMinutes % MINUTES_FOR_EVERY_HOUR;
+        
+        long totalDays = totalDays
+        
+        System.out.println("Average time to crack: " + years + " years, ", + 
+                    days + " days, " + hours + " hours, " + minutes + " minutes, "
+                    + seconds + " seconds.");
     }
     
     /**
