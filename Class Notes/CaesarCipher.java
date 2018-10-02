@@ -53,6 +53,7 @@ public class CaesarCipher
          */
         System.out.print("Enter the text to encrypt: ");
         
+        
         /*
          * The nextLine method returns ALL characters up to the end of the line
          *      (i.e., where the user typed enter)
@@ -65,8 +66,8 @@ public class CaesarCipher
         /*
          * The next method returns the next token in the stream as a String
          */
-        String passphrase = s.next();
-        passphrase = passphrase.toUpperCase();
+        String keyphrase = s.next();
+        keyphrase = keyphrase.toUpperCase();
         
         System.out.print("Enter the number of seconds to test a guessed keyphrase: ");
         /*
@@ -304,6 +305,7 @@ public class CaesarCipher
             * indexOf
             *       returns the index of the start of the first occurence of 
             *           the specified string
+            *       if no occurences, returns -1
             * 
             * restOfKeyphrase:
             * A E S A R

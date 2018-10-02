@@ -115,7 +115,7 @@ public class Car
      */
     public String getVIN()
     {
-        return "";
+        return this.vin;
     }
     /**
      * Sets the VIN of this car
@@ -124,5 +124,20 @@ public class Car
      */
     public void setVIN(String newVIN)
     {
+        this.vin = newVIN;
+    }
+    
+    /**
+     * Returns a String that describes the state of this car
+     * 
+     * @return a String that describes the state of this car
+     */
+    public String toString()
+    {
+        String str = "VIN: " + this.getVIN() + 
+                    "; Fuel Effciency: " + this.fuelEfficiency + 
+                    " mpg; Fuel In Tank: " + this.getFuelInTank() + " gallons";
+                    
+        return str;            
     }
 }
