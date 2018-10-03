@@ -25,12 +25,15 @@ public class CityscapeComponent extends JComponent
      * It does not need to be invoked explicitly.
      *
      */
+    @Override
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
         
         // invoke the draw method on each object in your Cityscape
-        // ...
+        Moon moon1 = new Moon(0,0);
+        moon1.draw(g2);
+        
         
         
     }
