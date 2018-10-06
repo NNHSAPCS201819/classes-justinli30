@@ -13,12 +13,14 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
-    
+    Moon moon1 = new Moon();
+    Sun sun1 = new Sun();
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
-    
+    public CityscapeComponent()
+    {
+    }
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -31,11 +33,9 @@ public class CityscapeComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         
         // invoke the draw method on each object in your Cityscape
-        Moon moon1 = new Moon(0,0);
-        moon1.draw(g2);
         
-        
-        
+        this.sun1 = new Sun(80, 80);
+        sun1.draw(g2);
     }
     
     /**
@@ -46,9 +46,7 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
-        
-        
+        this.sun1.setSunCoord(200,200);
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         //  do not explicitly invoke the paintComponent method
         repaint();
