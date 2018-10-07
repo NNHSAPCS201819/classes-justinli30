@@ -15,7 +15,8 @@ public class CityscapeComponent extends JComponent
     // ...
     Moon moon1 = new Moon();
     Sun sun1 = new Sun();
-    
+    House house1 = new House();
+    Beanstalk beanstalk1 = new Beanstalk();
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     public CityscapeComponent()
@@ -34,8 +35,14 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         
-        this.sun1 = new Sun(80, 80);
+        this.sun1 = new Sun(80, 50);
         sun1.draw(g2);
+        
+        this.house1 = new House(45, 375);
+        house1.draw(g2);
+        
+        this.beanstalk1 = new Beanstalk(450, 560, 40);
+        beanstalk1.draw(g2);
     }
     
     /**

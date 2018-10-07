@@ -5,40 +5,75 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
-public class house
+public class House
 {
-    private int sunX;
-    private int sunY;
-    public Sun()
+    private int houseX;
+    private int houseY;
+    /**
+     * Default constructor for the House class. Sets the initial coordinates of the top left
+     *      corner of the house to be (0,0).
+     */
+    public House()
     {
-        sunX = 0;
-        sunY = 0;
+        houseX = 0;
+        houseY = 0;
     }
-    public Sun(int x, int y)
+    /**
+     * Constructs a new House object with specified coordinates of the top left corner.
+     * 
+     * @param   x   the x-coordinate for the house
+     * @param   y   the y-coordinate for the house
+     */
+    public House(int x, int y)
     {
-        sunX = x;
-        sunY = y;
+        houseX = x;
+        houseY = y;
     }
-    public void setSunCoord(int newX, int newY)
+    /**
+     * Sets the new coordinates for the house.
+     * 
+     * @param   newX    the new x-coordinate for the house
+     * @param   newY    the new y-coordinate for the house
+     */
+    public void setHouseCoord(int newX, int newY)
     {
-        sunX = newX;
-        sunY = newY;
+        houseX = newX;
+        houseY = newY;
     }
+    /**
+     * Draws the scene.
+     * 
+     * @param   g2  the graphics context
+     */
     public void draw(Graphics2D g2)
     {
-        //drawing dark background
-        Rectangle2D.Double background = new Rectangle2D.Double(0, 0, 800, 600);
-        g2.setColor(Color.CYAN.brighter());
-        g2.fill(background);
-        g2.draw(background);
+        //draw roof
+        int[] xPoints = {houseX, houseX + 150, houseX+ + 300};
+        int[] yPoints = {houseY + 70, houseY, houseY + 70}; 
+        g2.setColor(Color.YELLOW.darker());
+        g2.drawPolygon(xPoints, yPoints, 3); // found how to make polygon on javadoc
+        g2.fillPolygon(xPoints, yPoints, 3);
         
-        Ellipse2D.Double sun = new Ellipse2D.Double(sunX, sunY, 70, 70);
-        g2.setColor(Color.YELLOW);
-        g2.fill(sun);
-        g2.draw(sun);
+        //draw house
+        Rectangle2D.Double houseBody = new Rectangle2D.Double(houseX + 20, houseY + 71,
+                                                              260, 150);
+        g2.setColor(Color.ORANGE);
+        g2.draw(houseBody);
+        g2.fill(houseBody);
+        
+        //draw door
+        Rectangle2D.Double door = new Rectangle2D.Double(houseX + 190, houseY + 120, 40, 80);
+        g2.setColor(Color.RED.darker());
+        g2.draw(door);
+        g2.fill(door);
+        Ellipse2D.Double doorknob = new Ellipse2D.Double(houseX + 215, houseY + 150, 10, 10);
+        g2.setColor(Color.ORANGE.darker());
+        g2.draw(doorknob);
+        g2.fill(doorknob);
     }
 }
