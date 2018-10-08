@@ -37,15 +37,11 @@ public class Beanstalk
         height = z;
     }
     /**
-     * Sets the new coordinates for the beanstalk.
-     * 
-     * @param   newX    the new x-coordinate for the beanstalk
-     * @param   newY    the new y-coordinate for the beanstalk
+     * Grows the beanstalk.
      */
-    public void setBeanstalkCoord(int newX, int newY)
+    public void growBeanstalk()
     {
-        beanstalkX = newX;
-        beanstalkY = newY;
+        //FINISH
     }
     /**
      * Draws the scene.

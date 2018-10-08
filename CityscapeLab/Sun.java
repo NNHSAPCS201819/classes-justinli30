@@ -43,6 +43,15 @@ public class Sun
         sunX += moveX;
     }
     /**
+     * Sets the sun x-coordinate.
+     * 
+     * @param   newCoord    the new x-coordinate for the sun
+     */
+    public void setSunCoord(int newCoord)
+    {
+        sunX = newCoord;
+    }
+    /**
      * Draws the scene.
      * 
      * @param   g2  the graphics context

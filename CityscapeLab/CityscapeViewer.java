@@ -8,8 +8,8 @@ import javax.swing.JFrame;
  */
 public class CityscapeViewer
 {
-    // the cityscape will be animated for 60 seconds
-    static final int ANIMATION_TIME_IN_SECONDS = 60;
+    // the cityscape will be animated for 50 seconds
+    static final int ANIMATION_TIME_IN_SECONDS = 50;
    
     /**
      * main method for the program which creates and configures the frame for the program

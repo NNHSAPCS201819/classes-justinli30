@@ -43,6 +43,15 @@ public class Moon
         moonX += moveX;
     }
     /**
+     * Sets the moon x-coordinate.
+     * 
+     * @param   newCoord    the new x-coordinate for the moon
+     */
+    public void setMoonCoord(int newCoord)
+    {
+        moonX = newCoord;
+    }
+    /**
      * Draws the scene.
      * 
      * @param   g2  the graphics context
