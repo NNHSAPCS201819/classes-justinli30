@@ -34,15 +34,13 @@ public class Sun
         sunY = y;
     }
     /**
-     * Sets the new coordinates for the sun.
+     * Moves the sun.
      * 
-     * @param   newX    the new x-coordinate for the sun
-     * @param   newY    the new y-coordinate for the sun
+     * @param   moveX    the amount the sun should move
      */
-    public void setSunCoord(int newX, int newY)
+    public void moveSunCoord(int moveX)
     {
-        sunX = newX;
-        sunY = newY;
+        sunX += moveX;
     }
     /**
      * Draws the scene.
@@ -50,13 +48,7 @@ public class Sun
      * @param   g2  the graphics context
      */
     public void draw(Graphics2D g2)
-    {
-        //drawing dark background
-        Rectangle2D.Double background = new Rectangle2D.Double(0, 0, 1000, 600);
-        g2.setColor(Color.CYAN.brighter());
-        g2.fill(background);
-        g2.draw(background);
-        
+    {        
         Ellipse2D.Double sun = new Ellipse2D.Double(sunX, sunY, 80, 80);
         g2.setColor(Color.YELLOW);
         g2.fill(sun);

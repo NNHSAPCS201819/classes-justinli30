@@ -34,15 +34,13 @@ public class Moon
         moonY = y;
     }
     /**
-     * Sets the new coordinates for the moon.
+     * Moves the moon.
      * 
-     * @param   newX    the new x-coordinate for the moon
-     * @param   newY    the new y-coordinate for the moon
+     * @param   moveX    the amount the moon should move
      */
-    public void setMoonCoord(int newX, int newY)
+    public void moveMoonCoord(int moveX)
     {
-        moonX = newX;
-        moonY = newY;
+        moonX += moveX;
     }
     /**
      * Draws the scene.
@@ -51,12 +49,6 @@ public class Moon
      */
     public void draw(Graphics2D g2)
     {
-        //drawing dark background
-        Rectangle2D.Double background = new Rectangle2D.Double(0, 0, 1000, 600);
-        g2.setColor(Color.BLUE.darker());
-        g2.fill(background);
-        g2.draw(background);
-        
         Ellipse2D.Double moon = new Ellipse2D.Double(moonX, moonY, 80, 80);
         g2.setColor(Color.WHITE);
         g2.fill(moon);
