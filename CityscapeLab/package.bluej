@@ -14,22 +14,46 @@ dependency4.type=UsesDependency
 dependency5.from=CityscapeComponent
 dependency5.to=Beanstalk
 dependency5.type=UsesDependency
+<<<<<<< HEAD
+dependency6.from=CityscapeComponent
+dependency6.to=LightBackground
+dependency6.type=UsesDependency
+dependency7.from=CityscapeComponent
+dependency7.to=DarkBackground
+dependency7.type=UsesDependency
 editor.fx.0.height=1087
 editor.fx.0.width=974
-editor.fx.0.x=953
-editor.fx.0.y=0
-objectbench.height=66
+editor.fx.0.x=-32000
+editor.fx.0.y=-32000
+objectbench.height=146
 objectbench.width=934
 package.divider.horizontal=0.5945273631840796
-package.divider.vertical=0.9260385005065856
-package.editor.height=907
+package.divider.vertical=0.8449848024316109
+package.editor.height=827
 package.editor.width=844
-package.editor.x=953
-package.editor.y=0
+package.editor.x=-32000
+package.editor.y=-32000
 package.frame.height=1087
 package.frame.width=974
+package.numDependencies=7
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=99
+objectbench.width=556
+package.divider.horizontal=0.6002132196162047
+package.divider.vertical=0.8908341915550978
+package.editor.height=858
+package.editor.width=844
+package.editor.x=218
+package.editor.y=0
+package.frame.height=1070
+package.frame.width=974
 package.numDependencies=5
-package.numTargets=6
+>>>>>>> 69078ba90f66fa07d4db0f62eeecceac34134736
+package.numTargets=9
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -43,6 +67,7 @@ target1.name=CityscapeViewer
 target1.naviview.expanded=false
 target1.showInterface=false
 target1.type=ClassTarget
+target1.typeParameters=
 target1.width=130
 target1.x=70
 target1.y=10
@@ -50,13 +75,15 @@ target2.height=50
 target2.name=Moon
 target2.showInterface=false
 target2.type=ClassTarget
+target2.typeParameters=
 target2.width=80
-target2.x=60
-target2.y=230
+target2.x=640
+target2.y=220
 target3.height=50
 target3.name=Beanstalk
 target3.showInterface=false
 target3.type=ClassTarget
+target3.typeParameters=
 target3.width=80
 target3.x=440
 target3.y=340
@@ -64,21 +91,69 @@ target4.height=50
 target4.name=House
 target4.showInterface=false
 target4.type=ClassTarget
+target4.typeParameters=
 target4.width=80
-target4.x=70
-target4.y=340
+target4.x=220
+target4.y=460
 target5.height=50
-target5.name=Sun
+target5.name=LightBackground
 target5.showInterface=false
 target5.type=ClassTarget
-target5.width=80
-target5.x=520
-target5.y=220
+<<<<<<< HEAD
+target5.width=130
+target5.x=220
+target5.y=590
+=======
+target5.typeParameters=
+target5.width=130
+target5.x=70
+target5.y=70
+>>>>>>> 69078ba90f66fa07d4db0f62eeecceac34134736
 target6.height=50
-target6.name=CityscapeComponent
-target6.naviview.expanded=false
+target6.name=Person
 target6.showInterface=false
 target6.type=ClassTarget
-target6.width=160
-target6.x=190
-target6.y=100
+<<<<<<< HEAD
+=======
+target6.typeParameters=
+>>>>>>> 69078ba90f66fa07d4db0f62eeecceac34134736
+target6.width=80
+target6.x=10
+target6.y=130
+target7.height=50
+target7.name=Sun
+target7.showInterface=false
+target7.type=ClassTarget
+<<<<<<< HEAD
+=======
+target7.typeParameters=
+>>>>>>> 69078ba90f66fa07d4db0f62eeecceac34134736
+target7.width=80
+target7.x=520
+target7.y=220
+target8.height=50
+target8.name=CityscapeComponent
+target8.naviview.expanded=false
+target8.showInterface=false
+target8.type=ClassTarget
+<<<<<<< HEAD
+target8.width=160
+target8.x=310
+target8.y=80
+=======
+target8.typeParameters=
+target8.width=160
+target8.x=190
+target8.y=100
+>>>>>>> 69078ba90f66fa07d4db0f62eeecceac34134736
+target9.height=50
+target9.name=DarkBackground
+target9.showInterface=false
+target9.type=ClassTarget
+<<<<<<< HEAD
+=======
+target9.typeParameters=
+>>>>>>> 69078ba90f66fa07d4db0f62eeecceac34134736
+target9.width=130
+target9.x=100
+target9.y=160

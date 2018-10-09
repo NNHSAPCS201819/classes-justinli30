@@ -75,5 +75,21 @@ public class House
         g2.setColor(Color.ORANGE.darker());
         g2.draw(doorknob);
         g2.fill(doorknob);
+        
+        //draw window
+        Rectangle2D.Double window = new Rectangle2D.Double(houseX + 70, houseY + 100,
+                                                           30, 30);
+        g2.setColor(Color.WHITE);
+        g2.draw(window);
+        g2.fill(window);
+        Rectangle2D.Double wLine1 = new Rectangle2D.Double(houseX + 70, houseY + 115,
+                                                           30, 3);
+        Rectangle2D.Double wLine2 = new Rectangle2D.Double(houseX + 83, houseY + 100,
+                                                           3, 30);
+        g2.setColor(Color.BLACK);
+        g2.draw(wLine1);
+        g2.fill(wLine1);
+        g2.draw(wLine2);
+        g2.fill(wLine2);
     }
 }
