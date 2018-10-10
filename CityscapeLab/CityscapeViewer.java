@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 public class CityscapeViewer
 {
     // the cityscape will be animated for 50 seconds
-    static final int ANIMATION_TIME_IN_SECONDS = 50;
+    static final int ANIMATION_TIME_IN_SECONDS = 42;
    
     /**
      * main method for the program which creates and configures the frame for the program
@@ -20,7 +20,7 @@ public class CityscapeViewer
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
-        frame.setSize(1000 /* x */, 600 /* y */);
+        frame.setSize(1400 /* x */, 600 /* y */);
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         

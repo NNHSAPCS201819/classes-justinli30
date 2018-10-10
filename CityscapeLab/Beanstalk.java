@@ -12,7 +12,8 @@ public class Beanstalk
 {
     private int beanstalkX;
     private int beanstalkY;
-    private int height;
+    private double defHeight;
+    private double width;
     /**
      * Default constructor for the Beanstalk class.
      *      Initializes the starting coordinates of the bottom left corner of the 
@@ -22,7 +23,8 @@ public class Beanstalk
     {
         beanstalkX = 0;
         beanstalkY = 600;
-        height = 0;
+        defHeight = 0;
+        width = 15;
     }
     /**
      * Constructs a new Beanstalk object with specified coordinates.
@@ -30,18 +32,20 @@ public class Beanstalk
      * @param   x   the x-coordinate for the beanstalk
      * @param   y   the y-coordinate for the beanstalk
      */
-    public Beanstalk(int x, int y, int z)
+    public Beanstalk(int x, int y, int w, int z)
     {
         beanstalkX = x;
         beanstalkY = y;
-        height = z;
+        defHeight = z;
+        width = w;
     }
     /**
      * Grows the beanstalk.
      */
     public void growBeanstalk()
     {
-        //FINISH
+        width = width * 1.04;
+        defHeight = defHeight * 1.08;
     }
     /**
      * Draws the scene.
@@ -51,8 +55,8 @@ public class Beanstalk
     public void draw(Graphics2D g2)
     {
         //drawing dark background
-        Rectangle2D.Double plant = new Rectangle2D.Double(beanstalkX, beanstalkY - height, 
-                                                          15, height);
+        Rectangle2D.Double plant = new Rectangle2D.Double(beanstalkX, beanstalkY - defHeight, 
+                                                          width, defHeight);
         g2.setColor(Color.GREEN.darker());
         g2.fill(plant);
         g2.draw(plant);

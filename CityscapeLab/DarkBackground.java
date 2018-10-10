@@ -21,7 +21,7 @@ public class DarkBackground
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle2D.Double background = new Rectangle2D.Double(0, 0, 1000, 600);
+        Rectangle2D.Double background = new Rectangle2D.Double(0, 0, 1400, 600);
         g2.setColor(Color.BLUE.darker());
         g2.fill(background);
         g2.draw(background);

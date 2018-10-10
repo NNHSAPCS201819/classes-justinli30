@@ -1,4 +1,4 @@
-
+  
 /**
  * Write a description of class Tree here.
  *
@@ -39,10 +39,10 @@ public class Tree
      */
     public Tree(int x, int y, int h, int w)
     {
-        treeX = x;
-        treeY = y;
         tHeight = h;
         tWidth = w;
+        treeX = x;
+        treeY = y;
     }
     /**
      * Draws the scene.
@@ -51,22 +51,21 @@ public class Tree
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle2D.Double trunk = new Rectangle2D.Double(treeX, treeY, tWidth,
+        int coordY = treeY - tHeight;
+        Rectangle2D.Double trunk = new Rectangle2D.Double(treeX, coordY, tWidth,
                                                           tHeight);
         Color brown = new Color(139, 69, 19);
         g2.setColor(brown);
         g2.draw(trunk);
         g2.fill(trunk);
         
-        double widthMiddle = tWidth / 2; // calculates middle of trunk
-        treeX += widthMiddle;
-        double lDimen = tWidth * 5; // calculates dimensions of leaf
-        double halfDimen = lDimen / 2.5; // calculates half of dimension
-        double newX = treeX - halfDimen; // calculates x coord of leaf
-        double heightMid = tHeight * (2/3);
-        treeY -= heightMid;
-        double newY = treeY - lDimen;
-        Ellipse2D.Double leaf = new Ellipse2D.Double(newX, newY, lDimen, lDimen);
+        double leafDimen = tWidth * 3;
+        double newX = treeX - tWidth;
+        double extraPart = tHeight * 6;
+        extraPart = extraPart / 10;
+        double newY = coordY - extraPart;
+        
+        Ellipse2D.Double leaf = new Ellipse2D.Double(newX, newY, leafDimen, leafDimen);
         g2.setColor(Color.GREEN);
         g2.draw(leaf);
         g2.fill(leaf);
