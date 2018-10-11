@@ -58,10 +58,11 @@ public class Moon
      */
     public void draw(Graphics2D g2)
     {
+        Color gray1 = new Color(128, 128, 128);
         Ellipse2D.Double moon = new Ellipse2D.Double(moonX, moonY, 80, 80);
-        g2.setColor(Color.WHITE);
+        g2.setColor(gray1);
         g2.fill(moon);
-        g2.draw(moon);
+        g2.draw(moon); 
     }
 
 }

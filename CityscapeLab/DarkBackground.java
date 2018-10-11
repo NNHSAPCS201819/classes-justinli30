@@ -11,9 +11,6 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 public class DarkBackground
 {
-    public DarkBackground()
-    {
-    }
     /**
      * Draws the scene.
      * 

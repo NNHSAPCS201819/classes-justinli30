@@ -6,7 +6,7 @@ import javax.swing.JComponent;
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author @gcschmit
+ * @author @justinli30
  * @version 18 July 2014
  */
 public class CityscapeComponent extends JComponent
@@ -23,6 +23,8 @@ public class CityscapeComponent extends JComponent
     private Tree tree1;
     private Tree tree2;
     private Tree tree3;
+    private Cloud cloud1;
+    private Cloud cloud2;
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     public CityscapeComponent()
@@ -36,6 +38,8 @@ public class CityscapeComponent extends JComponent
         this.tree1 = new Tree(900, 600, 140, 33);
         this.tree2 = new Tree(1050, 600, 180, 45);
         this.tree3 = new Tree(1200, 600, 160, 39);
+        this.cloud1 = new Cloud(260, 60, 90);
+        this.cloud2 = new Cloud(790, 60, 90);
     }
     
     /**
@@ -52,6 +56,8 @@ public class CityscapeComponent extends JComponent
         if (count <= 14)
         {
         light.draw(g2);
+        cloud1.draw(g2);
+        cloud2.draw(g2);
         sun1.draw(g2);
         house1.draw(g2);
         beanstalk1.draw(g2);
@@ -62,6 +68,8 @@ public class CityscapeComponent extends JComponent
         if (count > 14 && count <= 28)
         {
         dark.draw(g2);
+        cloud1.draw(g2);
+        cloud2.draw(g2);
         moon1.draw(g2);
         house1.draw(g2);
         beanstalk1.draw(g2);
@@ -72,6 +80,8 @@ public class CityscapeComponent extends JComponent
     if (count > 28 && count <= 42)
         {
         light.draw(g2);
+        cloud1.draw(g2);
+        cloud2.draw(g2);
         sun1.draw(g2);
         house1.draw(g2);
         beanstalk1.draw(g2);
