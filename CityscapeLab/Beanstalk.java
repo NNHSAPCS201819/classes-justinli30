@@ -45,7 +45,7 @@ public class Beanstalk
     public void growBeanstalk()
     {
         width = width * 1.04;
-        defHeight = defHeight * 1.08;
+        defHeight = defHeight * 1.07;
     }
     /**
      * Draws the scene.
