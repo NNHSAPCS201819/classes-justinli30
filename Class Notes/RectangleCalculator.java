@@ -21,5 +21,5 @@ public class RectangleCalculator
         double area = this.height * this.width;
         return area;
     }
-
+    
 }
